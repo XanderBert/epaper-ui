@@ -1,0 +1,14 @@
+{
+  "name": "epaper-ui",
+  "version": "1.0.0",
+  "description": "Drawing helpers for Adafruit GFX displays, made for three-colour e-paper: thick lines, Bezier curves, outlines and a battery indicator.",
+  "keywords": ["e-paper", "epaper", "adafruit-gfx", "gxepd2", "ui", "battery"],
+  "frameworks": "arduino",
+  "platforms": "*",
+  "dependencies": {
+    "adafruit/Adafruit GFX Library": "^1.11.0"
+  },
+  "build": {
+    "flags": ["-Wall", "-Wextra"]
+  }
+}
