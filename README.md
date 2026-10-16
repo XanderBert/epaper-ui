@@ -6,18 +6,6 @@ e-paper: thick lines, Bezier curves, outlines and a battery indicator.
 It only depends on Adafruit GFX, not on GxEPD2 or any board. So it draws on any GFX
 display, and into a `GFXcanvas` for a desktop preview.
 
-## Use it in a project
-
-In `platformio.ini`, pick one of these:
-
-```ini
-lib_deps =
-    ; while working on the library: use the local folder, edits show up on the next build
-    symlink://../libs/epaper-ui
-    ; once it's on GitHub: a fixed version
-    https://github.com/<you>/epaper-ui.git#v1.0.0
-```
-
 ## What's in it
 
 | Header | |
@@ -42,13 +30,3 @@ void drawScreen(Adafruit_GFX& g, float volts, int percent) {
 With GxEPD2, pass the display object as `g`. With
 [espink42-board](../espink42-board), `volts` and `percent` come from
 `espink42::readBattery()`.
-
-## Releasing a new version
-
-Bump `version` in `library.json`, commit, then tag and push:
-
-```bash
-git tag v1.0.1 && git push --tags
-```
-
-Projects only pick it up when you change the `#v...` in their `lib_deps`.
